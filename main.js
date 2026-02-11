@@ -14,10 +14,24 @@ const onOffButton = document.querySelector('button')
 // ci metto un testo dentro il bottone in questo caso 'Accendi'
 onOffButton.innerHTML = 'Accendi'
 
+/* 
 //rendo il bottone cliccabile grazie al 'click' e gli do una funzione per dirgli cosa deve fare
 onOffButton.addEventListener('click', function () {
     // gli dico che se il testo all interno del bottone e 'Accendi' cambia img e cambia testo altrimenti l opposto
     if (onOffButton.innerHTML == 'Accendi') {
+        onOffButton.innerHTML = 'Spegni'
+        lampImg.src = './img/yellow_lamp.png'
+    } else {
+        onOffButton.innerHTML = 'Accendi'
+        lampImg.src = './img/white_lamp.png'
+    }
+})
+ */
+// metodo con includes()
+//rendo il bottone cliccabile grazie al 'click' e gli do una funzione per dirgli cosa deve fare
+onOffButton.addEventListener('click', function () {
+    // gli dico che se il testo all interno del bottone e 'Accendi' cambia img e cambia testo altrimenti l opposto
+    if (onOffButton.innerHTML.includes('Accendi')) {
         onOffButton.innerHTML = 'Spegni'
         lampImg.src = './img/yellow_lamp.png'
     } else {
